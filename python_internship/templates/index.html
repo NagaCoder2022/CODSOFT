@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Upload</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            height: 100vh; /* Take full height of the viewport */
+            margin: 0; /* Remove default body margin */
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto; /* Center horizontally */
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        input[type="file"] {
+            margin-bottom: 10px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: calc(100% - 20px);
+        }
+
+        input[type="file"]:focus {
+            outline: none;
+            padding: 10px 20px; /* Increase button size */
+            background-color: #007bff; /* Blue color */
+        }
+
+        button[type="submit"] {
+            padding: 15px 30px; /* Increase button size */
+            background-color: #007bff; /* Blue color */
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button[type="submit"]:hover { 
+            background-color: #0056b3; /* Darker blue color on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Upload CV</h1>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" multiple>
+            <button type="submit">Upload</button>
+        </form>
+    </div>
+</body>
+</html>
